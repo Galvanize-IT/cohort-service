@@ -4,10 +4,16 @@ require "date"
 
 module Cohortservice
 
-  def self.address(campus)
+  def self.value(campus)
     @data = Data.data
     return nil unless @data[:campuses][campus.to_sym]
-    @data[:campuses][campus.to_sym][:address]
+    @data[:campuses][campus.to_sym][:value]
+  end
+
+  def self.area(campus)
+    @data = Data.data
+    return nil unless @data[:campuses][campus.to_sym]
+    @data[:campuses][campus.to_sym][:area]
   end
 
   def self.latlon(campus)
@@ -25,7 +31,7 @@ module Cohortservice
     cohort_info = {}
 
     date = Date.parse("01-#{cohort[0]}-20#{cohort[1]}")
-    end_date = date+184
+    end_date = date+183
 
     education = define_education cohort[2]
     campus = define_campus cohort[3]

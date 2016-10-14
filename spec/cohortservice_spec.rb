@@ -5,8 +5,12 @@ describe Cohortservice do
     expect(Cohortservice::VERSION).not_to be nil
   end
 
-  it 'should return address of a campus' do
-    expect(Cohortservice.address('Denver - Golden Triangle')).to eq '1062 Delaware St, Denver, CO 80204'
+  it 'should return value of a campus' do
+    expect(Cohortservice.value('Denver - Golden Triangle')).to eq '1062 Delaware St, Denver, CO 80204'
+  end
+
+  it 'should return area of a campus' do
+    expect(Cohortservice.area('Denver - Golden Triangle')).to eq 'Denver, CO'
   end
 
   # it 'should return the correct address for all campuses'
@@ -25,7 +29,7 @@ describe Cohortservice do
       end_date: '4 2016',
       education: 'Web Development',
       campus: 'Denver - Platte',
-      campus_info: {address: '1644 Platte St, Denver, CO 80202', lat: 39.757657, long: -105.006953}
+      campus_info: {value: '1644 Platte St, Denver, CO 80202', area: 'Denver, CO', lat: 39.757657, long: -105.006953}
                                                            })
   end
 
