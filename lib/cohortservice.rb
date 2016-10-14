@@ -21,11 +21,12 @@ module Cohortservice
     return nil unless @data[:campuses][campus.to_sym]
     latlng = {}
     latlng[:lat] = @data[:campuses][campus.to_sym][:lat]
-    latlng[:lon] = @data[:campuses][campus.to_sym][:long]
+    latlng[:lng] = @data[:campuses][campus.to_sym][:lng]
     latlng
   end
 
   def self.cohort_info(cohort_label)
+    @data = Data.data
     # return nil unless validate_cohort cohort_label
     cohort = cohort_label.split('-')
     cohort_info = {}

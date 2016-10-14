@@ -16,20 +16,20 @@ describe Cohortservice do
   # it 'should return the correct address for all campuses'
 
   it 'should return lat long of a campus' do
-    expect(Cohortservice.latlon('Denver - Golden Triangle')).to eq({lat: 39.733513, lon: -104.992588})
+    expect(Cohortservice.latlon('Denver - Golden Triangle')).to eq({lat: 39.733513, lng: -104.992588})
   end
 
   # it 'should return the correct lat longs for all campuses'
 
   it 'should return cohorts info' do
-    expect(Cohortservice.cohort_info("16-01-FS-DG")).to eq({
+    expect(Cohortservice.cohort_info('15-10-WD-DP')).to eq({
       start_date_full: Date.new(2015,10,01),
       start_date: '10 2015',
       end_date_full: Date.new(2016,04,01),
       end_date: '4 2016',
       education: 'Web Development',
       campus: 'Denver - Platte',
-      campus_info: {value: '1644 Platte St, Denver, CO 80202', area: 'Denver, CO', lat: 39.757657, long: -105.006953}
+      campus_info: {value: '1644 Platte St, Denver, CO 80202', area: 'Denver, CO', lat: 39.757657, lng: -105.006953}
                                                            })
   end
 
