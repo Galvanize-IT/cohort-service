@@ -30,7 +30,7 @@ module Cohortservice
     cohort = cohort_label.split('-')
     cohort_info = {}
 
-    date = Date.parse("01-#{cohort[0]}-20#{cohort[1]}")
+    date = Date.parse("01-#{cohort[1]}-20#{cohort[0]}")
     end_date = date+183
 
     education = define_education cohort[2]

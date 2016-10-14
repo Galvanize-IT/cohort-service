@@ -22,7 +22,7 @@ describe Cohortservice do
   # it 'should return the correct lat longs for all campuses'
 
   it 'should return cohorts info' do
-    expect(Cohortservice.cohort_info('10-15-WD-DP')).to eq({
+    expect(Cohortservice.cohort_info("16-01-FS-DG")).to eq({
       start_date_full: Date.new(2015,10,01),
       start_date: '10 2015',
       end_date_full: Date.new(2016,04,01),
