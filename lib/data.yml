@@ -1,0 +1,81 @@
+products:
+  DS:
+    course: Data Science Immersive
+    education: Data Science
+  DE:
+    course: Data Engineering Immersive
+    education: Data Science
+  GU:
+    course: GalvanizeU
+    education: Data Science
+  FS:
+    course: Web Development Immersive
+    education: Web Development
+  WD:
+    course: Web Development Immersive
+    education: Web Development
+
+campuses:
+  DG:
+    name: Denver - Golden Triangle
+    location:
+      :value: 1062 Delaware St, Denver, CO 80204
+      :area: Denver, CO
+      :lat: 39.733513
+      :lng: -104.992588
+  DP:
+    name: Denver - Platte
+    location:
+      :value: 1644 Platte St, Denver, CO 80202
+      :area: Denver, CO
+      :lat: 39.757657
+      :lng: -105.006953
+  BD:
+    name: Boulder - Walnut St.
+    location:
+      :value: 1023 Walnut Street Boulder CO 80302
+      :area: Boulder, CO
+      :lat: 40.016545
+      :lng: -105.281686
+  FC:
+    name: Fort Collins - Old Town
+    location:
+      :value: 242 Linden St, Fort Collins, CO 80524
+      :area: Fort Collins, CO
+      :lat: 40.588511
+      :lng: -105.074243
+  SF:
+    name: San Francisco - SoMa
+    location:
+      :value: 44 Tehama St, San Francisco, CA 94105
+      :area: San Francisco, CA
+      :lat: 37.787601
+      :lng: -122.396643
+  SEA:
+    name: Seattle - Pioneer Square
+    location:
+      :value: 111 S Jackson St, Seattle, WA 98104
+      :area: Seattle, WA
+      :lat: 47.598962
+      :lng: -122.333799
+  AUS:
+    name: Austin - 2nd St District
+    location:
+      :value: 118 Nueces St, Austin, TX 78701
+      :area: Austin, TX
+      :lat: 30.266114
+      :lng: -97.749945
+  NYC:
+    name: New York - Soho West
+    location:
+      :value: 315 Hudson St, New York, NY 10013
+      :area: New York City, New York
+      :lat: 40.726388
+      :lng: -74.007792
+  PHX:
+    name: Phoenix - Warehouse District
+    location:
+      :value: 111 W. Monroe, Suite 602, Phoenix, AZ 85003
+      :area: Phoenix, AZ
+      :lat: 33.450012
+      :lng: -112.075619
