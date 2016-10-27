@@ -1,21 +1,4 @@
 class Cohortservice::Cohort
-  class Parts
-    attr_reader :year, :month, :product, :campus
-
-    def initialize(parts_array)
-      @year = parts_array[0].to_i
-      @sequence = parts_array[1]
-      @product = parts_array[2]
-      @campus = parts_array[3]
-    end
-
-    def valid?
-      return false if year < 11 || year > 30
-      return false if Cohortservice.data['products'][product].nil?
-      return false if Cohortservice.data['campuses'][campus].nil?
-      true
-    end
-  end
 
   def initialize(label)
     @label = label
@@ -56,4 +39,22 @@ class Cohortservice::Cohort
     }
   end
 
+  class Parts
+    attr_reader :year, :month, :product, :campus
+
+    def initialize(parts_array)
+      @year = parts_array[0].to_i
+      @sequence = parts_array[1]
+      @product = parts_array[2]
+      @campus = parts_array[3]
+    end
+
+    def valid?
+      return false if year < 11 || year > 30
+      return false if Cohortservice.data['products'][product].nil?
+      return false if Cohortservice.data['campuses'][campus].nil?
+      true
+    end
+    
+  end
 end
