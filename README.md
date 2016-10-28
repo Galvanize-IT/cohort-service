@@ -19,6 +19,42 @@ Or install it yourself as:
 
 ## Usage
 
+### Simple
+
+```ruby
+Cohortservice.cohort_info('16-10-DS-DP')
+```
+
+You'll get back a hash that includes the following:
+
+```ruby
+{
+  course: 'Data Science Immersive',
+  education: 'Data Science',
+  campus: 'Denver - Platte',
+  label: '16-10-DS-DP',
+  location: {
+    value: '1644 Platte St, Denver, CO 80202',
+    area: 'Denver, CO',
+    lat: 39.757657,
+    lng: -105.006953
+  }
+}
+```
+
+### Advanced
+
+```ruby
+cohort = Cohortservice::Cohort.new('16-10-FS-DG')
+cohort.info # => Cohort Info Hash
+cohort.course # => 'Web Development Immersive'
+cohort.education # => 'Web Development'
+cohort.campus # => 'Denver - Golden Triangle'
+cohort.location # => {value: '1644 Platte St, Denver, CO 80202', area: 'Denver, CO', lat: 39.733513, lng: -104.992588}
+cohort.latlng # => {lat: 39.733513, lng: -104.992588}
+```
+
+
 ## Development
 
 Standard ruby project using bundler. Run `rake` to run the specs.
