@@ -31,7 +31,7 @@ campuses:
       :lat: 39.757657
       :lng: -105.006953
   BD:
-    name: Boulder - Walnut St.
+    name: Boulder - Walnut St
     location:
       :value: 1023 Walnut Street Boulder CO 80302
       :area: Boulder, CO
