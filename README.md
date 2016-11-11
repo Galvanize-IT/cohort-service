@@ -22,7 +22,7 @@ Or install it yourself as:
 ### Simple
 
 ```ruby
-Cohortservice.cohort_info('16-10-DS-DP')
+CohortService.cohort_info('16-10-DS-DP')
 ```
 
 You'll get back a hash that includes the following:
@@ -45,7 +45,7 @@ You'll get back a hash that includes the following:
 ### Advanced
 
 ```ruby
-cohort = Cohortservice::Cohort.new('16-10-FS-DG')
+cohort = CohortService::Cohort.new('16-10-FS-DG')
 cohort.info # => Cohort Info Hash
 cohort.course # => 'Web Development Immersive'
 cohort.education # => 'Web Development'

@@ -6,7 +6,7 @@ require "cohortservice/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "cohortservice"
-  s.version     = Cohortservice::VERSION
+  s.version     = CohortService::VERSION
   s.authors     = ["Derik Linch"]
   s.email       = ["dev@galvanize.com"]
   s.homepage    = "http://www.galvanize.com"
