@@ -1,18 +1,18 @@
-class Cohortservice::Cohort
+class CohortService::Cohort
 
   def initialize(label)
     @label = label
     @parts = Parts.new(label.to_s.split('-'))
-    raise Cohortservice::ValidationError unless @parts.valid?
+    raise CohortService::ValidationError unless @parts.valid?
   end
 
   def info
     @info ||= {
-      course: Cohortservice.data['products'][@parts.product]['course'],
-      education: Cohortservice.data['products'][@parts.product]['education'],
-      campus: Cohortservice.data['campuses'][@parts.campus]['name'],
+      course: CohortService.data['products'][@parts.product]['course'],
+      education: CohortService.data['products'][@parts.product]['education'],
+      campus: CohortService.data['campuses'][@parts.campus]['name'],
       label: @label,
-      location: Cohortservice.data['campuses'][@parts.campus]['location']
+      location: CohortService.data['campuses'][@parts.campus]['location']
     }
   end
 
@@ -51,8 +51,8 @@ class Cohortservice::Cohort
 
     def valid?
       return false if year < 11 || year > 30
-      return false if Cohortservice.data['products'][product].nil?
-      return false if Cohortservice.data['campuses'][campus].nil?
+      return false if CohortService.data['products'][product].nil?
+      return false if CohortService.data['campuses'][campus].nil?
       true
     end
     

@@ -4,7 +4,7 @@ require "yaml"
 require "cohortservice/version"
 require "cohortservice/cohort"
 
-module Cohortservice
+module CohortService
   class ValidationError < StandardError; end
 
   def self.cohort_info(cohort_label)

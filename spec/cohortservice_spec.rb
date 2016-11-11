@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe Cohortservice do
+describe CohortService do
 
   it "has a version number" do
-    expect(Cohortservice::VERSION).not_to be nil
+    expect(CohortService::VERSION).not_to be nil
   end
 
   it "provides an interface for me to easily get information" do
-    allow(Cohortservice::Cohort).to receive(:new).with('11-XX-FS-DP').and_call_original
+    allow(CohortService::Cohort).to receive(:new).with('11-XX-FS-DP').and_call_original
 
     results = described_class.cohort_info('11-XX-FS-DP')
     expect(results).to eq({

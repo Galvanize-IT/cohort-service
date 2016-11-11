@@ -1,24 +1,24 @@
 require 'spec_helper'
 
-describe Cohortservice::Cohort do
+describe CohortService::Cohort do
   subject { described_class.new('15-XX-WD-DP') }
 
   describe "validation" do
 
     it "raises an exception if the cohort label seems invalid" do
-      expect { described_class.new('XX-XX-XX-XX') }.to raise_error(Cohortservice::ValidationError)
+      expect { described_class.new('XX-XX-XX-XX') }.to raise_error(CohortService::ValidationError)
 
       # years must be between 2001 and 2030
-      expect { described_class.new('XX-XX-FS-DP') }.to raise_error(Cohortservice::ValidationError)
-      expect { described_class.new('10-XX-FS-DP') }.to raise_error(Cohortservice::ValidationError)
+      expect { described_class.new('XX-XX-FS-DP') }.to raise_error(CohortService::ValidationError)
+      expect { described_class.new('10-XX-FS-DP') }.to raise_error(CohortService::ValidationError)
       expect { described_class.new('11-XX-FS-DP') }.to_not raise_error
-      expect { described_class.new('31-XX-FS-DP') }.to raise_error(Cohortservice::ValidationError)
+      expect { described_class.new('31-XX-FS-DP') }.to raise_error(CohortService::ValidationError)
 
       # product must be understood
-      expect { described_class.new('11-XX-XX-DP') }.to raise_error(Cohortservice::ValidationError)
+      expect { described_class.new('11-XX-XX-DP') }.to raise_error(CohortService::ValidationError)
 
       # campus must be understood
-      expect { described_class.new('11-XX-FS-XX') }.to raise_error(Cohortservice::ValidationError)
+      expect { described_class.new('11-XX-FS-XX') }.to raise_error(CohortService::ValidationError)
     end
 
   end
