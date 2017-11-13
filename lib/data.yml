@@ -17,6 +17,9 @@ products:
   PC:
     course: Pre-Course Work
     education: Web Development
+  TE:
+    course: Web Development Immersive
+    education: Web Development
 
 campuses:
   DG:
@@ -83,6 +86,13 @@ campuses:
       :lat: 33.450012
       :lng: -112.075619
   OL:
+    name: Online
+    location:
+      :value: 1062 Delaware St, Denver, CO 80204
+      :area: Denver, CO
+      :lat: 39.733513
+      :lng: -104.992588
+  ST:
     name: Online
     location:
       :value: 1062 Delaware St, Denver, CO 80204
