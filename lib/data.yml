@@ -17,6 +17,9 @@ products:
   PC:
     course: Pre-Course Work
     education: Web Development
+  CB:
+    course: Cognitive Builder
+    education: Web Development
   TE:
     course: Web Development Immersive
     education: Web Development
