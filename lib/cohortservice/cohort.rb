@@ -2,7 +2,7 @@ class CohortService::Cohort
 
   def initialize(label)
     @label = label
-    @parts = Parts.new(label.to_s.split('-'))
+    @parts = Parts.new(label.to_s.gsub("(", "-").split('-'))
     raise CohortService::ValidationError unless @parts.valid?
   end
 
